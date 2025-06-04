@@ -13,6 +13,7 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import { useRef } from "react";
 import ArrowButton from "./ArrowButton";
+import { Swiper as SwiperType } from "swiper"; // Import Swiper type
 
 const Categories = () => {
   const categories = [
@@ -117,7 +118,7 @@ const Categories = () => {
       icon: ShoppingBagIcon,
     },
   ];
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   return (
     <section className="w-full relative">

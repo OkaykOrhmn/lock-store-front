@@ -9,6 +9,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import ArrowButton from "./ArrowButton";
 import { useRef } from "react";
+import { Swiper as SwiperType } from "swiper"; // Import Swiper type
 
 type ProductsListProps = {
   title: string;
@@ -30,7 +31,9 @@ const DiscProductsList = ({
   products = [],
   card: Card,
 }: ProductsListProps) => {
-  var prs: ProductsProps[] = [];
+
+  const prs: ProductsProps[] = [];
+
   products.map((p) => {
     const item: ProductsProps = {
       id: p.id,
@@ -45,7 +48,7 @@ const DiscProductsList = ({
     };
     prs.push(item);
   });
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   return (
     <section className="flex flex-col items-center justify-center w-full md:w-[90vw]">
@@ -98,7 +101,7 @@ const DiscProductsList = ({
                 key={product.id}
                 className="flex justify-center items-center py-4 transition-transform duration-300 [&.swiper-slide-active]:scale-110 ![&.swiper-slide-active]:z-50 z-10"
               >
-                <ProductCard product={product} />
+                <Card product={product} />
               </SwiperSlide>
             ))}
             {/* Navigation Arrows (Visible on Desktop) */}

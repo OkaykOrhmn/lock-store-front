@@ -7,6 +7,7 @@ import { useRef } from "react";
 // import "swiper/css";
 // import "swiper/css/pagination";
 import ArrowButton from "./ArrowButton";
+import { Swiper as SwiperType } from "swiper"; // Import Swiper type
 
 const Banners = () => {
   const banners = [
@@ -44,8 +45,8 @@ const Banners = () => {
     },
   ];
 
-  const swiperRef = useRef<any>(null);
-
+  const swiperRef = useRef<SwiperType | null>(null);
+  
   return (
     <section className="w-full h-[160px] md:h-[400px] relative md:pr-6 md:py-6">
       <Swiper
