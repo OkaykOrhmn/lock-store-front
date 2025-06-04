@@ -3,7 +3,6 @@ import Link from "next/link";
 import {
   UserCircleIcon,
   MagnifyingGlassIcon,
-  Bars3Icon,
 } from "@heroicons/react/24/outline";
 import links from "../constants";
 

@@ -6,8 +6,8 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { useRef } from "react";
 // import "swiper/css";
 // import "swiper/css/pagination";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import ArrowButton from "./ArrowButton";
+
 const Banners = () => {
   const banners = [
     {

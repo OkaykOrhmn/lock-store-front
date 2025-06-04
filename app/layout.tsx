@@ -4,7 +4,6 @@ import { ThemeProvider } from "next-themes";
 import ThemeToggleButton from "./components/ThemeToggleButton"; // Import the client component
 import Header from "./sections/Header";
 import BottomNavigation from "./sections/BottomNavigation";
-import Drawer from "./sections/Drawer";
 import Footer from "./sections/Footer";
 
 export const metadata: Metadata = {
