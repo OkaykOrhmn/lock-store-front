@@ -4,8 +4,8 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { useRef } from "react";
-import "swiper/css";
-import "swiper/css/pagination";
+// import "swiper/css";
+// import "swiper/css/pagination";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import ArrowButton from "./ArrowButton";
 const Banners = () => {
@@ -85,11 +85,11 @@ const Banners = () => {
         <div className="hidden md:block">
           <ArrowButton
             dir="left"
-            onClick={() => swiperRef.current?.slidePrev()}
+            onClick={() => swiperRef.current?.slideNext()}
           />
           <ArrowButton
             dir="right"
-            onClick={() => swiperRef.current?.slideNext()}
+            onClick={() => swiperRef.current?.slidePrev()}
           />
         </div>
       </Swiper>

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import {
@@ -16,26 +16,106 @@ import ArrowButton from "./ArrowButton";
 
 const Categories = () => {
   const categories = [
-    { name: "قفل کتابی", image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png", icon: ComputerDesktopIcon },
-    { name: "قفل کمدی", image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp", icon: ShoppingBagIcon },
-    { name: "قفل کتابی", image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png", icon: ComputerDesktopIcon },
-    { name: "قفل کمدی", image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp", icon: ShoppingBagIcon },
-    { name: "قفل کتابی", image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png", icon: ComputerDesktopIcon },
-    { name: "قفل کمدی", image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp", icon: ShoppingBagIcon },
-    { name: "قفل کتابی", image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png", icon: ComputerDesktopIcon },
-    { name: "قفل کمدی", image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp", icon: ShoppingBagIcon },
-    { name: "قفل کتابی", image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png", icon: ComputerDesktopIcon },
-    { name: "قفل کمدی", image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp", icon: ShoppingBagIcon },
-    { name: "قفل کتابی", image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png", icon: ComputerDesktopIcon },
-    { name: "قفل کمدی", image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp", icon: ShoppingBagIcon },
-    { name: "قفل کتابی", image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png", icon: ComputerDesktopIcon },
-    { name: "قفل کمدی", image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp", icon: ShoppingBagIcon },
-    { name: "قفل کتابی", image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png", icon: ComputerDesktopIcon },
-    { name: "قفل کمدی", image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp", icon: ShoppingBagIcon },
-    { name: "قفل کتابی", image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png", icon: ComputerDesktopIcon },
-    { name: "قفل کمدی", image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp", icon: ShoppingBagIcon },
-    { name: "قفل کتابی", image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png", icon: ComputerDesktopIcon },
-    { name: "قفل کمدی", image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp", icon: ShoppingBagIcon },
+    {
+      name: "قفل کتابی",
+      image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png",
+      icon: ComputerDesktopIcon,
+    },
+    {
+      name: "قفل کمدی",
+      image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp",
+      icon: ShoppingBagIcon,
+    },
+    {
+      name: "قفل کتابی",
+      image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png",
+      icon: ComputerDesktopIcon,
+    },
+    {
+      name: "قفل کمدی",
+      image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp",
+      icon: ShoppingBagIcon,
+    },
+    {
+      name: "قفل کتابی",
+      image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png",
+      icon: ComputerDesktopIcon,
+    },
+    {
+      name: "قفل کمدی",
+      image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp",
+      icon: ShoppingBagIcon,
+    },
+    {
+      name: "قفل کتابی",
+      image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png",
+      icon: ComputerDesktopIcon,
+    },
+    {
+      name: "قفل کمدی",
+      image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp",
+      icon: ShoppingBagIcon,
+    },
+    {
+      name: "قفل کتابی",
+      image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png",
+      icon: ComputerDesktopIcon,
+    },
+    {
+      name: "قفل کمدی",
+      image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp",
+      icon: ShoppingBagIcon,
+    },
+    {
+      name: "قفل کتابی",
+      image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png",
+      icon: ComputerDesktopIcon,
+    },
+    {
+      name: "قفل کمدی",
+      image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp",
+      icon: ShoppingBagIcon,
+    },
+    {
+      name: "قفل کتابی",
+      image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png",
+      icon: ComputerDesktopIcon,
+    },
+    {
+      name: "قفل کمدی",
+      image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp",
+      icon: ShoppingBagIcon,
+    },
+    {
+      name: "قفل کتابی",
+      image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png",
+      icon: ComputerDesktopIcon,
+    },
+    {
+      name: "قفل کمدی",
+      image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp",
+      icon: ShoppingBagIcon,
+    },
+    {
+      name: "قفل کتابی",
+      image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png",
+      icon: ComputerDesktopIcon,
+    },
+    {
+      name: "قفل کمدی",
+      image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp",
+      icon: ShoppingBagIcon,
+    },
+    {
+      name: "قفل کتابی",
+      image: "https://rangejavid.com/wp-content/uploads/52_0022_Layer-30.png",
+      icon: ComputerDesktopIcon,
+    },
+    {
+      name: "قفل کمدی",
+      image: "https://cuobeh.ir/wp-content/uploads/2021/11/yaragh-93.webp",
+      icon: ShoppingBagIcon,
+    },
   ];
   const swiperRef = useRef<any>(null);
 
@@ -50,7 +130,7 @@ const Categories = () => {
         autoplay
         navigation={false} // Enable navigation arrows
         breakpoints={{
-          0:{slidesPerView: 4},
+          0: { slidesPerView: 4 },
           640: { slidesPerView: 5 }, // 3 items on sm screens
           768: { slidesPerView: 5 }, // 4 items on md screens
           1024: { slidesPerView: 6 }, // 6 items on lg screens
@@ -59,13 +139,16 @@ const Categories = () => {
           2000: { slidesPerView: 12 }, // 8 items on xl screens
         }}
         className="w-full md:w-[90%]"
-         onSwiper={(swiper) => {
+        onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
       >
         {categories.map((cat, idx) => {
           return (
-            <SwiperSlide key={`${cat.name}-${idx}`} className="flex justify-center p-4">
+            <SwiperSlide
+              key={`${cat.name}-${idx}`}
+              className="flex justify-center p-4"
+            >
               <div className="flex flex-col items-center justify-center">
                 <div
                   className="flex flex-col items-center justify-center rounded-full shadow-sm bg-surface 
@@ -81,22 +164,24 @@ const Categories = () => {
                     className="object-cover mb-2 rounded-full"
                   />
                 </div>
-                <h1 className="text-xs sm:text-sm font-medium truncate text-center w-full mt-4">{cat.name}</h1>
+                <h1 className="text-xs sm:text-sm font-medium truncate text-center w-full mt-4">
+                  {cat.name}
+                </h1>
               </div>
             </SwiperSlide>
           );
         })}
       </Swiper>
-       <div className="hidden md:block">
-          <ArrowButton
-            dir="left"
-            onClick={() => swiperRef.current?.slidePrev()}
-          />
-          <ArrowButton
-            dir="right"
-            onClick={() => swiperRef.current?.slideNext()}
-          />
-        </div>
+      <div className="hidden md:block">
+        <ArrowButton
+          dir="left"
+          onClick={() => swiperRef.current?.slideNext()}
+        />
+        <ArrowButton
+          dir="right"
+          onClick={() => swiperRef.current?.slidePrev()}
+        />
+      </div>
     </section>
   );
 };
