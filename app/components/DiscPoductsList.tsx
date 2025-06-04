@@ -3,7 +3,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-import ProductCard from "./ProductCard";
 import ProductsProps from "../model/productsProps";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -101,7 +100,7 @@ const DiscProductsList = ({
                 key={product.id}
                 className="flex justify-center items-center py-4 transition-transform duration-300 [&.swiper-slide-active]:scale-110 ![&.swiper-slide-active]:z-50 z-10"
               >
-                <Card product={product} />
+                <Card key={index} product={product} />
               </SwiperSlide>
             ))}
             {/* Navigation Arrows (Visible on Desktop) */}
