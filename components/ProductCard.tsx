@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import {
@@ -11,9 +12,12 @@ import ProductsProps from "../model/productsProps";
 
 type pProps = {
   product: ProductsProps;
+  className?: string;
+
+  
 };
 
-const ProductCard = ({ product }: pProps) => {
+const ProductCard = ({ product, className = '' }: pProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -58,13 +62,18 @@ const ProductCard = ({ product }: pProps) => {
   // Calculate previous image index for fade-out effect
   const prevImageIndex =
     currentImageIndex === 0 ? product.imageSrc.length - 1 : currentImageIndex - 1;
+  const router = useRouter();
 
   return (
     <div
-      className={`bg-background text-onSurface rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 w-full 
-       max-w-[200px] md:max-w-[260px] mx-auto  ${product.className}`}
+      className={`!bg-surface !w-[calc(50%-8px)] !sm:w-[calc(50%-16px)] text-onSurface rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105  
+       max-w-[200px] md:max-w-[260px] mx-auto  ${className} `}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
+      onClick={()=>{
+              router.push(`/products/${product.id}`);
+
+      }}
     >
       {/* Image Section */}
       <div className="relative w-full h-38 md:h-64">

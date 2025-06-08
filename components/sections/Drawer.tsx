@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
-import links from '../constants';
+import links from '@/constants';
 import Link from 'next/link';
 
 interface DrawerProps {

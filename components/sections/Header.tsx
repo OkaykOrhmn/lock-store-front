@@ -1,12 +1,30 @@
-import React from "react";
+"use client";
+import { useRouter } from "next/navigation";
+import { useRef } from "react";
 import Link from "next/link";
 import {
   UserCircleIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/24/outline";
-import links from "../constants";
+import links from "@/constants";
 
 const Header = () => {
+  const router = useRouter();
+  const inputRef = useRef<HTMLInputElement>(null);
+  const handleSearch = () => {
+    const value = inputRef.current?.value.trim();
+    if (value) {
+      router.push(`/products?q=${encodeURIComponent(value)}`);
+    } else {
+      router.push("/products");
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleSearch();
+    }
+  };
   return (
     <header className="!h-18 !md:h-32 !w-full !py-2 !px-4 flex items-center justify-center ">
       <div className=" flex flex-row justify-between items-center gap-4 !w-full xl:max-w-[80vw] !h-full">
@@ -32,8 +50,13 @@ const Header = () => {
             name="serch"
             placeholder="جستجو"
             className="h-10 px-5 pr-10 rounded-full text-sm focus:outline-none border border-onSurface text-onSurface w-full !max-w-xl"
+            ref={inputRef}
+            onKeyDown={handleKeyDown}
           />
-          <MagnifyingGlassIcon className=" absolute right-0 top-0 mt-3 mr-4 w-4 h-4" />
+          <MagnifyingGlassIcon
+            className=" absolute right-0 top-0 mt-3 mr-4 w-4 h-4"
+            onClick={handleSearch}
+          />
         </div>
         <UserCircleIcon className="hidden md:flex h-2/3" />
       </div>

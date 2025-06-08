@@ -25,14 +25,14 @@ const ProductsList = ({
     <section className="flex flex-col items-center justify-center  w-full md:w-[90vw]">
       <div className="flex flex-row  w-full x-4 ">
         <div
-          className={`flex justify-center items-center px-6 py-4 md:bg-${color} md:rounded-t-2xl`}
+          className={`flex justify-center items-center px-6 py-4 md:bg-secondary md:rounded-t-2xl`}
         >
           {title}
         </div>
       </div>
 
       <div
-        className={`w-full flex justify-center items-center !rounded-tr-none rounded-2xl md:bg-${color}`}
+        className={`w-full flex justify-center items-center !rounded-tr-none rounded-2xl md:bg-secondary`}
       >
         <div className="w-full overflow-x-auto">
           <div

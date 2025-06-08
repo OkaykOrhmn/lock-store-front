@@ -1,9 +1,9 @@
-import Banners from "./components/Banners";
-import Categories from "./components/Categories";
-import ProductsList from "./components/ProductsList";
-import ProductCard from "./components/ProductCard";
-import prods from "./constants/products";
-import DiscProductsList from "./components/DiscPoductsList";
+import Banners from "../components/Banners";
+import Categories from "../components/Categories";
+import ProductsList from "../components/ProductsList";
+import ProductCard from "../components/ProductCard";
+import prods from "../constants/products";
+import DiscProductsList from "../components/DiscPoductsList";
 
 export default function Home() {
   return (

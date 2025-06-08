@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import ThemeToggleButton from "./components/ThemeToggleButton"; // Import the client component
-import Header from "./sections/Header";
-import BottomNavigation from "./sections/BottomNavigation";
-import Footer from "./sections/Footer";
+import ThemeToggleButton from "../components/ThemeToggleButton"; // Import the client component
+import Header from "../components/sections/Header";
+import BottomNavigation from "../components/sections/BottomNavigation";
+import Footer from "../components/sections/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",

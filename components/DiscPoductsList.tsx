@@ -21,7 +21,7 @@ type ProductsListProps = {
     | "background"
     | "foreground";
   products?: ProductsProps[]; // Use ProductsProps for products
-  card: React.ComponentType<{ product: ProductsProps }>; // Expect component accepting product prop
+  card: React.ComponentType<{ product: ProductsProps; className?: string}>; // Expect component accepting product prop
 };
 
 const DiscProductsList = ({
@@ -30,23 +30,6 @@ const DiscProductsList = ({
   products = [],
   card: Card,
 }: ProductsListProps) => {
-
-  const prs: ProductsProps[] = [];
-
-  products.map((p) => {
-    const item: ProductsProps = {
-      id: p.id,
-      description: p.description,
-      imageAlt: p.imageAlt,
-      imageSrc: p.imageSrc,
-      price: p.price,
-      title: p.title,
-      className: `${p.className} !w-full !max-w-full !h-full  `,
-      interval: p.interval,
-      originalPrice: p.originalPrice,
-    };
-    prs.push(item);
-  });
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
@@ -86,7 +69,7 @@ const DiscProductsList = ({
               },
               768: {
                 slidesPerView: 3,
-                spaceBetween:32,
+                spaceBetween: 32,
                 centeredSlides: true, // Center on desktop
               },
             }}
@@ -95,12 +78,16 @@ const DiscProductsList = ({
               swiperRef.current = swiper;
             }}
           >
-            {prs.map((product, index) => (
+            {products.map((product, index) => (
               <SwiperSlide
                 key={product.id}
                 className="flex justify-center items-center py-4 transition-transform duration-300 [&.swiper-slide-active]:scale-110 ![&.swiper-slide-active]:z-50 z-10"
               >
-                <Card key={index} product={product} />
+                <Card
+                  key={index}
+                  product={product}
+                  className="!w-full !max-w-full !h-full"
+                />
               </SwiperSlide>
             ))}
             {/* Navigation Arrows (Visible on Desktop) */}
