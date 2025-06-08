@@ -17,7 +17,7 @@ type ProductsListProps = {
 
 const ProductsList = ({
   title,
-  color = "primary",
+  // color = "primary",
   products = [],
   card: Card,
 }: ProductsListProps) => {
